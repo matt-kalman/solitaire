@@ -24,7 +24,7 @@ struct Game {
 
         int i = 0;
         for (auto& t : tableau) {
-            for (int x = 1; x <= i+1; x++) {
+            for (int x = 0; x <= i; x++) {
                 stock[0].give(stock[0].cards.front(), t);
             }
             t.cards.at(i)->flip();
@@ -315,9 +315,7 @@ int main(int argc, char* argv[]) {
                                         (f.cards.empty() && back->rank == 0)) {
                                             t.give(back, f);
                                         } 
-                                        if (true) {
-                                            solving = true;
-                                        }
+                                        solving = true;
                                     }
                                 }
                             }
