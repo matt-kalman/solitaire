@@ -31,56 +31,56 @@ SDL_Surface* surface(int x, int w, int h, int a) {
 }
 
 struct Card {
-    int rank, suit;
-    bool faceUp = false, color = false;
-    SDL_Rect rect = {0,0,cw,ch};
+	int rank, suit;
+	bool faceUp = false, color = false;
+	SDL_Rect rect = {0,0,cw,ch};
 
-    Card(int r, int s) {
-        rank = r;
-        suit = s;
+	Card(int r, int s) {
+		rank = r;
+		suit = s;
 
-        if (suit == 0 || suit == 3) {
-            color = true;
-        }
-    }
+		if (suit == 0 || suit == 3) {
+			color = true;
+		}
+	}
 
-    Card(const Card &other) {
-        memcpy(this, &other, sizeof(Card));
-    }
+	Card(const Card &other) {
+		memcpy(this, &other, sizeof(Card));
+	}
 
-    void flip() {
-        faceUp = !faceUp;
-    }
+	void flip() {
+		faceUp = !faceUp;
+	}
 
-    void show() {
-        if (!faceUp) {
-            image = surface(52, 71, 96, 3);
-        } else {
-            image = surface(suit*13 + rank, 71, 96, 3);
-        }
+	void show() {
+		if (!faceUp) {
+			image = surface(52, 71, 96, 3);
+		} else {
+			image = surface(suit*13 + rank, 71, 96, 3);
+		}
 
-        texture = SDL_CreateTextureFromSurface(renderer, image);
-        SDL_FreeSurface(image);
-        image = NULL;
+		texture = SDL_CreateTextureFromSurface(renderer, image);
+		SDL_FreeSurface(image);
+		image = NULL;
 
-        SDL_RenderCopy(renderer, texture, 0, &rect);
-        SDL_DestroyTexture(texture);
-        texture = NULL;
-    }
+		SDL_RenderCopy(renderer, texture, 0, &rect);
+		SDL_DestroyTexture(texture);
+		texture = NULL;
+	}
 };
 
 struct Pile {
-    vector<Card*> cards;
-    SDL_Rect rect = {0,0,cw,ch};
+	vector<Card*> cards;
+	SDL_Rect rect = {0,0,cw,ch};
 
-    void add(Card* card) {
-        cards.push_back(card);
-    }
+	void add(Card* card) {
+		cards.push_back(card);
+	}
 
-    void give(Card* card, Pile &other) {
-        cards.erase(remove(begin(cards), end(cards), card), end(cards));
-        other.add(card);
-    }
+	void give(Card* card, Pile &other) {
+		cards.erase(remove(begin(cards), end(cards), card), end(cards));
+		other.add(card);
+	}
 };
 
 #endif

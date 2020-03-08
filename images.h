@@ -57,16 +57,16 @@
 #include "images/solv.c"
 
 const unsigned char* img[57] = {
-    s01.pixel_data, s02.pixel_data, s03.pixel_data, s04.pixel_data, s05.pixel_data,
-    s06.pixel_data, s07.pixel_data, s08.pixel_data, s09.pixel_data, s10.pixel_data,
-    s11.pixel_data, s12.pixel_data, s13.pixel_data, h01.pixel_data, h02.pixel_data,
-    h03.pixel_data, h04.pixel_data, h05.pixel_data, h06.pixel_data, h07.pixel_data,
-    h08.pixel_data, h09.pixel_data, h10.pixel_data, h11.pixel_data, h12.pixel_data,
-    h13.pixel_data, d01.pixel_data, d02.pixel_data, d03.pixel_data, d04.pixel_data,
-    d05.pixel_data, d06.pixel_data, d07.pixel_data, d08.pixel_data, d09.pixel_data,
-    d10.pixel_data, d11.pixel_data, d12.pixel_data, d13.pixel_data, c01.pixel_data,
-    c02.pixel_data, c03.pixel_data, c04.pixel_data, c05.pixel_data, c06.pixel_data,
-    c07.pixel_data, c08.pixel_data, c09.pixel_data, c10.pixel_data, c11.pixel_data,
-    c12.pixel_data, c13.pixel_data,	back.pixel_data, icon.pixel_data, res.pixel_data,
-    und.pixel_data, solv.pixel_data
+	s01.pixel_data, s02.pixel_data, s03.pixel_data, s04.pixel_data, s05.pixel_data,
+	s06.pixel_data, s07.pixel_data, s08.pixel_data, s09.pixel_data, s10.pixel_data,
+	s11.pixel_data, s12.pixel_data, s13.pixel_data, h01.pixel_data, h02.pixel_data,
+	h03.pixel_data, h04.pixel_data, h05.pixel_data, h06.pixel_data, h07.pixel_data,
+	h08.pixel_data, h09.pixel_data, h10.pixel_data, h11.pixel_data, h12.pixel_data,
+	h13.pixel_data, d01.pixel_data, d02.pixel_data, d03.pixel_data, d04.pixel_data,
+	d05.pixel_data, d06.pixel_data, d07.pixel_data, d08.pixel_data, d09.pixel_data,
+	d10.pixel_data, d11.pixel_data, d12.pixel_data, d13.pixel_data, c01.pixel_data,
+	c02.pixel_data, c03.pixel_data, c04.pixel_data, c05.pixel_data, c06.pixel_data,
+	c07.pixel_data, c08.pixel_data, c09.pixel_data, c10.pixel_data, c11.pixel_data,
+	c12.pixel_data, c13.pixel_data,	back.pixel_data, icon.pixel_data, res.pixel_data,
+	und.pixel_data, solv.pixel_data
 };
